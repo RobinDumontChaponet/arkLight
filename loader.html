@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Robin Dumont-Chaponet">
+<title>claude's running 0.1a | arkLight engine [LITERAL] 0.4c | Loader 0.1a</title>
+<link rel="stylesheet" type="text/css" href="style/loader.css">
+<script type="text/javascript" src="js/io.utils.js"></script>
+<script type="text/javascript" src="js/ARK.ui.js"></script>
+<script type="text/javascript" src="js/loader.js"></script>
+</head>
+<body>
+<div id="loader">
+<p id="progress"> %</p>
+<p id="report"></p>
+</div>
+<script type="text/javascript">
+
+var el=document.getElementById('progress');
+/*el.style.opacity=1;
+span=el.getElementsByTagName('span')[0];
+val=0;
+interval=setInterval(function(){
+	val +=1;
+	span.innerHTML=val;
+	if(val>=100) {
+		clearInterval(interval);
+		el.innerHTML='<img src="assets/loader2.gif" alt="Loading..." />';
+		el.getElementsByTagName('img')[0].style.opacity=.5;
+	}
+}, 30);
+*/
+l = new Loader(el, document.getElementById('report'));
+l.report=false;
+//l.need(['sprites/sprite2.png', 'tiles/med/med.png', 'tiles/med/moto.png', 'tiles/med/route0.psd', 'tiles/med/route1.psd', 'tiles/med/route2.psd', 'tiles/med/route3.psd', 'tiles/med/route4.psd', 'tiles/med/route5.psd', 'wall-manor.png', 'tiles/med/route7.psd', 'tiles/med/character.psd', 'tiles/med/ground0.psd', 'tiles/med/base.psd', 'test.gif']);
+l.need(['assets/index.php?load[]=hud-hearts.png&load[]=loader2.gif']);
+</script>
+</body>
+</html>

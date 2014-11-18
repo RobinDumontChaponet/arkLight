@@ -1,0 +1,101 @@
+/* CSS Document */
+
+body.editor {
+	padding: 3% 150px 0 44px;
+	box-sizing: border-box;
+	-webkit-transition: padding 1s ease-in-out;
+	-moz-transition: padding 1s ease-in-out;
+	-ms-transition: padding 1s ease-in-out;
+	-o-transition: padding 1s ease-in-out;
+	transition: padding 1s ease-in-out;
+}
+body.editor div#game {
+	position: static;
+	margin: 0 auto;
+}
+
+
+div#tools {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+button {
+	width: 44px;
+	margin: 0;
+	padding: 6px;
+	border: 1px solid grey;
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,.3) 100% ), rgba(255, 255, 255, .5);
+	box-shadow: inset 0 0 1px black;
+	display: block;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+button:hover {
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,.3) 100% ), rgba(255, 255, 255, .6);
+	box-shadow: inset 0 0 3px black;
+}
+button:active {
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,.3) 100% ), rgba(255, 255, 255, .7);
+	box-shadow: inset 0 0 8px black;
+}
+button.active {
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,.3) 100% ), rgba(255, 255, 255, .8);
+	box-shadow: inset 0 0 8px black;
+}
+button.active:hover {
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,.3) 100% ), rgba(255, 255, 255, .9);
+}
+button > img {
+	width: 32px;
+}
+button.active > img {
+	-webkit-transform: scale(.95);
+	-moz-transform: scale(.95);
+	-ms-transform: scale(.95);
+	-o-transform: scale(.95);
+	transform: scale(.95);
+}
+
+#tilesLib {
+	margin: 0;
+	width: 150px;
+	min-width: 50px;
+	font-size: 9px;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	color: #FFF;
+	overflow: auto;
+	z-index: 400;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #666;
+	resize: horizontal;
+	word-break: break-all;
+	background: rgba(250, 250, 250, .6);
+}
+#tilesLib img {
+	display: block;
+}
+
+
+#selector {
+	position: absolute;
+	overflow: hidden;
+	z-index: 400;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #666;
+}
